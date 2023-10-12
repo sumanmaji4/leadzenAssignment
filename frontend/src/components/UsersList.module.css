@@ -1,0 +1,35 @@
+.full_body {
+  margin: 2%;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+.allItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+  border: 1px solid black;
+  padding: 15px 0 15px 0;
+  border-radius: 8px;
+}
+
+.item {
+  width: 25%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hed {
+  font-weight: bold;
+}
