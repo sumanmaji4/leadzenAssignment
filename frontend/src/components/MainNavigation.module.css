@@ -1,22 +1,31 @@
 .header {
-  max-width: 60rem;
   margin: auto;
-  padding: 2rem;
-  display: flex;
-  justify-content: space-between;
+  padding: 2vh 8vw;
+  background-color: #0e2954;
 }
 
 .list {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
+  list-style: none;
 }
 
 .list a {
+  color: #9db2bf;
   text-decoration: none;
-  color: var(--color-primary-400);
+  font-size: large;
+  font-weight: 700;
+}
+
+input {
+  height: 4vh;
+  width: 15vw;
+  border-radius: 10px;
+  border-style: none;
+  padding-left: 15px;
 }
 
 .list a:hover,
 .list a.active {
-  color: var(--color-primary-800);
+  color: #ffffff;
 }

@@ -47,3 +47,15 @@
   justify-content: center;
   align-items: center;
 }
+
+button {
+  background-color: #0e2954;
+  padding: 15px;
+  border-radius: 15px;
+  color: #9db2bf;
+  font-weight: 600;
+}
+
+button:hover {
+  color: #ffffff;
+}

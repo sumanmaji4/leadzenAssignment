@@ -7,6 +7,7 @@
   flex-direction: column;
   gap: 1rem;
   list-style: none;
+  padding: 0;
 }
 
 h1 {
@@ -32,4 +33,27 @@ h1 {
 
 .hed {
   font-weight: bold;
+}
+
+button {
+  cursor: pointer;
+  background-color: #0e2954;
+  padding: 15px;
+  border-radius: 15px;
+  color: #9db2bf;
+  font-weight: 600;
+}
+
+button:hover {
+  color: #ffffff;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.currPage {
+  margin-left: 2vw;
+  margin-right: 2vw;
 }
