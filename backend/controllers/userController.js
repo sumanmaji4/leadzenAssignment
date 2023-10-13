@@ -2,9 +2,7 @@ import pkg from 'body-parser'
 const { json } = pkg
 import fetch from 'node-fetch'
 
-//@desc
-//@route
-//@access
+// api to get all users
 const getUsers = async (req, res, next) => {
   try {
     const response = await fetch('https://jsonplaceholder.typicode.com/users')
@@ -22,38 +20,12 @@ const getUsers = async (req, res, next) => {
     if (!err.statusCode) {
       err.statusCode = 500
     }
-    // ekhane "throw err" korle next middleware e pouchabe na
+
     next(err)
   }
 }
 
-// exports.getUsers = async (req, res, next) => {
-//   const currentPage = req.query.page || 1
-//   const perPage = 2
-
-//   try {
-//     const totalItems = await Post.find().countDocuments()
-
-//     const posts = await Post.find()
-//       .populate('creator')
-//       .sort({ createdAt: -1 })
-//       .skip((currentPage - 1) * perPage)
-//       .limit(perPage)
-
-//     res.status(200).json({
-//       message: 'Fetched posts successfully',
-//       posts: posts,
-//       totalItems: totalItems,
-//     })
-//   } catch (err) {
-//     if (!err.statusCode) {
-//       err.statusCode = 500
-//     }
-//     // ekhane "throw err" korle next middleware e pouchabe na
-//     next(err)
-//   }
-// }
-
+// api to get single user by id
 const getUserById = async (req, res, next) => {
   //   console.log(req.originalUrl)
   const userId = req.params.userId
@@ -64,7 +36,7 @@ const getUserById = async (req, res, next) => {
     const user = users.filter((curr) => curr.id == userId)
     // console.log(user)
 
-    if (!user.length) res.status(200).json({ message: 'user not found' })
+    if (!user.length) res.status(404).json({ message: 'user not found' })
 
     res.status(200).json({ message: 'Post fetched.', user: user })
   } catch (err) {
